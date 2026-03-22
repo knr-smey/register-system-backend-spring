@@ -13,7 +13,7 @@ cd backend
 
 ```bash
 bash: ./mvnw clean package -DskipTests
-command prompt: mvnw clean package -DskipTests
+command_prompt: mvnw clean package -DskipTests
 ```
 
 ---
