@@ -12,7 +12,8 @@ cd backend
 ## ⚙️ 2. Build Project
 
 ```bash
-./mvnw clean package -DskipTests
+bash: ./mvnw clean package -DskipTests
+command prompt: mvnw clean package -DskipTests
 ```
 
 ---
