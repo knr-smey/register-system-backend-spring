@@ -1,6 +1,20 @@
 # Backend (Spring Boot + Docker)
 
-## 1. Prepare Environment
+## 1. Clone Code
+
+```bash
+git clone <your-repo-url>
+cd backend
+```
+
+After clone, run:
+
+```bash
+cp .env.example .env
+docker compose up -d --build
+```
+
+## 2. Prepare Environment
 
 Create your local environment file:
 
@@ -10,10 +24,10 @@ cp .env.example .env
 
 Default values in `.env` are ready for local Docker usage.
 
-## 2. Start Everything
+## 3. Start Everything
 
 ```bash
-./mvnw clean package -DskipTests
+docker compose up -d --build
 ```
 
 This starts:
@@ -21,7 +35,9 @@ This starts:
 - MySQL 8
 - phpMyAdmin
 
-## 3. Access Services
+Note: `docker compose -u --build` is invalid. Use `up -d --build`.
+
+## 4. Access Services
 
 - API: `http://localhost:8000`
 - phpMyAdmin: `http://localhost:8081`
@@ -31,7 +47,7 @@ phpMyAdmin login:
 - User: `root`
 - Password: `root`
 
-## 4. Useful Commands
+## 5. Useful Commands
 
 Show logs:
 
