@@ -13,7 +13,7 @@ Default values in `.env` are ready for local Docker usage.
 ## 2. Start Everything
 
 ```bash
-docker compose up -d --build
+./mvnw clean package -DskipTests
 ```
 
 This starts:
