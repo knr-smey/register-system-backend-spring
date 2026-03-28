@@ -1,48 +1,52 @@
-# 🚀 Backend Setup
+# Backend (Spring Boot + Docker)
 
-## 📥 1. Clone Project
+## 1. Prepare Environment
 
-```bash
-git clone <your-repo-url>
-cd backend
-```
-
----
-
-## ⚙️ 2. Build Project
+Create your local environment file:
 
 ```bash
-bash: ./mvnw clean package -DskipTests
-command_prompt: mvnw clean package -DskipTests
+cp .env.example .env
 ```
 
----
+Default values in `.env` are ready for local Docker usage.
 
-## 🐳 3. Run Docker
+## 2. Start Everything
 
 ```bash
-docker-compose up -d --build
+./mvnw clean package -DskipTests
 ```
 
----
+This starts:
+- Spring Boot app
+- MySQL 8
+- phpMyAdmin
 
-## 🌐 4. Access
+## 3. Access Services
 
-* API → http://localhost:8000
-* phpMyAdmin → http://localhost:8081
+- API: `http://localhost:8000`
+- phpMyAdmin: `http://localhost:8081`
 
-Login phpMyAdmin:
+phpMyAdmin login:
+- Server: `mysql`
+- User: `root`
+- Password: `root`
 
-```
-Server: mysql
-User: root
-Password: root
-```
+## 4. Useful Commands
 
----
-
-## 🛑 Stop Project
+Show logs:
 
 ```bash
-docker-compose down
+docker compose logs -f app
+```
+
+Stop stack:
+
+```bash
+docker compose down
+```
+
+Stop stack and remove DB volume:
+
+```bash
+docker compose down -v
 ```
