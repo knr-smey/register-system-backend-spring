@@ -6,15 +6,15 @@ services:
     container_name: register_mysql
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: mony2024**2000
       MYSQL_DATABASE: register_db
     ports:
-      - "3308:3306"  # Host:Container
+      - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
       - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-proot"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-pmony2024**2000"]
       interval: 10s
       timeout: 5s
       retries: 10
@@ -27,7 +27,7 @@ services:
     container_name: register_app
     restart: unless-stopped
     ports:
-      - "8003:8000"  # Host:Container
+      - "8003:8000"
     volumes:
       - .:/app
     depends_on:
@@ -36,25 +36,25 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/register_db
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_DATASOURCE_PASSWORD: mony2024**2000
       DB_HOST: mysql
       DB_PORT: 3306
       DB_NAME: register_db
       DB_USER: root
-      DB_PASS: root
+      DB_PASS: mony2024**2000
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: register_phpmyadmin
     restart: unless-stopped
-    platform: linux/amd64           # Fixes exec format error on Windows x86_64
+    platform: linux/amd64
     ports:
-      - "8081:80"                   # Host:Container
+      - "8081:80"
     environment:
-      PMA_HOST: mysql                # Must match MySQL service name
+      PMA_HOST: mysql
       PMA_PORT: 3306
       PMA_USER: root
-      PMA_PASSWORD: root
+      PMA_PASSWORD: mony2024**2000
     depends_on:
       mysql:
         condition: service_healthy
