@@ -1,5 +1,5 @@
 package register_system.backend.controller;
 
-public class sub_catagories_controller {
+public class Sub_catagories_controller {
     
 }
