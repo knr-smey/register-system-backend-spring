@@ -8,11 +8,10 @@ import register_system.backend.service.TestService;
 
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
-@RequestMapping("/api/test")
+@RequestMapping("/api/input")
 @RequiredArgsConstructor
 public class TestController {
 
