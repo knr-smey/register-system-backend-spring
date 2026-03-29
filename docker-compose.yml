@@ -21,11 +21,13 @@ services:
   app:
     build:
       context: .
-      dockerfile: docker/app/Dockerfile
+      dockerfile: docker/app/Dockerfile.dev
     container_name: register_app
     restart: unless-stopped
     ports:
       - "${APP_PORT}:8000"
+    volumes:
+      - .:/app
     depends_on:
       mysql:
         condition: service_healthy
