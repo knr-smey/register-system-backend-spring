@@ -59,7 +59,6 @@ docker compose up -d --build --force-recreate app
 
 
 Show logs:
-
 ```bash
 docker compose logs -f app
 ```
