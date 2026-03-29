@@ -49,6 +49,15 @@ phpMyAdmin login:
 
 ## 5. Useful Commands
 
+### Rebuild Docker Image (after pull or code changes)
+
+Run this command in your project root to rebuild the backend Docker image:
+
+```bash
+docker build -t backend-app -f docker/app/Dockerfile .
+```
+
+
 Show logs:
 
 ```bash

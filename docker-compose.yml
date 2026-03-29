@@ -2,7 +2,7 @@ services:
   mysql:
     image: mysql:8
     container_name: register_mysql
-    restart: always
+    restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_PASS}
       MYSQL_DATABASE: ${DB_NAME}
@@ -42,7 +42,7 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: register_phpmyadmin
-    restart: always
+    restart: unless-stopped
     ports:
       - "${PHPMYADMIN_PORT}:80"
     environment:
