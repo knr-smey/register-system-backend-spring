@@ -54,7 +54,7 @@ phpMyAdmin login:
 Run this command in your project root to rebuild the backend Docker image:
 
 ```bash
-docker build -t backend-app -f docker/app/Dockerfile .
+docker compose up -d --build --force-recreate app
 ```
 
 
