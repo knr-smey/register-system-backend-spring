@@ -11,6 +11,8 @@ import register_system.backend.mapper.course.CourseMapper;
 import register_system.backend.model.course.Course;
 import register_system.backend.repository.course.CourseRepository;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -140,10 +142,21 @@ public class CourseService {
 
     // validate image
     private void validateImage(MultipartFile file) {
+
+        try {
+            BufferedImage image = ImageIO.read(file.getInputStream());
+            if (image == null) {
+                throw new RuntimeException("Invalid image file");
+            }
+        } catch (IOException e) {
+            throw new RuntimeException("Invalid image file");
+        }
+
         String contentType = file.getContentType();
-        if(contentType == null || !ALLOWED_CONTENT_TYPES.contains(contentType)){
+        if (contentType == null || !ALLOWED_CONTENT_TYPES.contains(contentType)) {
             throw new RuntimeException("Only JPG, PNG, and WEBP images are allowed");
         }
+
 
     }
 }

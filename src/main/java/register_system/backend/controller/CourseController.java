@@ -1,4 +1,0 @@
-package register_system.backend.controller;
-
-public class CourseController {
-}
