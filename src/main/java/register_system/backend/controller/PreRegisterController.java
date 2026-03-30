@@ -40,7 +40,6 @@ public class PreRegisterController {
     }
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    @Operation(summary = "Create pre-registration with image upload")
     public ResponseEntity<PreRegisterResponseDTO> create(
             @RequestParam("student_id") Long studentId,
             @RequestParam("course_id") Long courseId,
@@ -62,7 +61,6 @@ public class PreRegisterController {
     }
 
     @PutMapping(value = "/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    @Operation(summary = "Update pre-registration with image upload")
     public ResponseEntity<PreRegisterResponseDTO> update(
             @PathVariable Long id,
             @RequestParam("student_id") Long studentId,
