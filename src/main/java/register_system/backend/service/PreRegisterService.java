@@ -1,23 +1,24 @@
 package register_system.backend.service;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-import register_system.backend.dto.PreRegisterRequestDTO;
-import register_system.backend.dto.PreRegisterResponseDTO;
-import register_system.backend.mapper.PreRegisterMapper;
-import register_system.backend.model.PreRegister;
-import register_system.backend.repository.PreRegisterRepository;
-import register_system.backend.enums.RegistrationStatus;
-
-import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.UUID;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
+
+import lombok.RequiredArgsConstructor;
+import register_system.backend.dto.PreRegisterRequestDTO;
+import register_system.backend.dto.PreRegisterResponseDTO;
+import register_system.backend.enums.RegistrationStatus;
+import register_system.backend.mapper.PreRegisterMapper;
+import register_system.backend.model.PreRegister;
+import register_system.backend.repository.PreRegisterRepository;
 
 @Service
 @RequiredArgsConstructor
