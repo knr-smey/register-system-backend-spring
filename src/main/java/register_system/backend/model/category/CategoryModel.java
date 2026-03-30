@@ -1,4 +1,4 @@
-package register_system.backend.model.categories;
+package register_system.backend.model.category;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class categoriesModel {
+public class CategoryModel {
  
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
