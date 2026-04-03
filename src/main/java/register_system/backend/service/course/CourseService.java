@@ -156,7 +156,5 @@ public class CourseService {
         if (contentType == null || !ALLOWED_CONTENT_TYPES.contains(contentType)) {
             throw new RuntimeException("Only JPG, PNG, and WEBP images are allowed");
         }
-
-
     }
 }

@@ -41,7 +41,6 @@ public class CourseController {
         return courseService.getById(id);
     }
 
-
     @PutMapping(value = "/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @RequestBody(
             content = @Content(mediaType = MediaType.MULTIPART_FORM_DATA_VALUE)
@@ -52,7 +51,6 @@ public class CourseController {
     ) throws IOException {
         return courseService.update(id, request);
     }
-
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
