@@ -6,4 +6,5 @@ import lombok.Data;
 public class TestRequest {
     private String testName;
     private String testPassword;
+    private String testDescription;
 }
