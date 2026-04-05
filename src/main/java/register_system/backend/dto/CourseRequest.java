@@ -1,4 +1,4 @@
-package register_system.backend.dto.course;
+package register_system.backend.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;

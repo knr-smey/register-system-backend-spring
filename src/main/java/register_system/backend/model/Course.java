@@ -1,4 +1,4 @@
-package register_system.backend.model.course;
+package register_system.backend.model;
 
 import jakarta.persistence.*;
 import lombok.*;

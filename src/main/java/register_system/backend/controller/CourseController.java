@@ -1,4 +1,4 @@
-package register_system.backend.controller.course;
+package register_system.backend.controller;
 
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
@@ -7,9 +7,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import register_system.backend.dto.course.CourseRequest;
-import register_system.backend.dto.course.CourseResponse;
-import register_system.backend.service.course.CourseService;
+import register_system.backend.dto.CourseRequest;
+import register_system.backend.dto.CourseResponse;
+import register_system.backend.service.CourseService;
 
 import java.io.IOException;
 import java.util.List;

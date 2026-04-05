@@ -1,4 +1,4 @@
-package register_system.backend.dto.course;
+package register_system.backend.dto;
 
 import lombok.*;
 

@@ -1,15 +1,15 @@
-package register_system.backend.service.course;
+package register_system.backend.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
-import register_system.backend.dto.course.CourseRequest;
-import register_system.backend.dto.course.CourseResponse;
-import register_system.backend.mapper.course.CourseMapper;
-import register_system.backend.model.course.Course;
-import register_system.backend.repository.course.CourseRepository;
+import register_system.backend.dto.CourseRequest;
+import register_system.backend.dto.CourseResponse;
+import register_system.backend.mapper.CourseMapper;
+import register_system.backend.model.Course;
+import register_system.backend.repository.CourseRepository;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

@@ -1,8 +1,8 @@
-package register_system.backend.mapper.course;
+package register_system.backend.mapper;
 
-import register_system.backend.dto.course.CourseRequest;
-import register_system.backend.dto.course.CourseResponse;
-import register_system.backend.model.course.Course;
+import register_system.backend.dto.CourseRequest;
+import register_system.backend.dto.CourseResponse;
+import register_system.backend.model.Course;
 
 public class CourseMapper {
 
