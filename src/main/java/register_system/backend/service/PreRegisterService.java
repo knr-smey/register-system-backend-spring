@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import register_system.backend.dto.PreRegisterRequestDTO;
 import register_system.backend.dto.PreRegisterResponseDTO;
 import register_system.backend.enums.RegistrationStatus;
@@ -22,6 +23,7 @@ import register_system.backend.repository.PreRegisterRepository;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class PreRegisterService {
 
     private final PreRegisterRepository repository;
@@ -42,7 +44,7 @@ public class PreRegisterService {
             Path filePath = uploadPath.resolve(filename);
             Files.copy(file.getInputStream(), filePath);
 
-            return uploadDir + "/" + filename;
+            return filePath.toString();
         } catch (IOException e) {
             throw new RuntimeException("Could not save file", e);
         }
@@ -80,6 +82,7 @@ public class PreRegisterService {
             try {
                 entity.setStatus(RegistrationStatus.valueOf(dto.getStatus().toUpperCase()));
             } catch (IllegalArgumentException e) {
+                log.warn("Invalid status value: {}", dto.getStatus(), e);
             }
         }
         return mapper.toResponseDTO(repository.save(entity));
