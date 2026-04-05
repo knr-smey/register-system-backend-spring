@@ -1,10 +1,10 @@
-package register_system.backend.mapper.Category;
+package register_system.backend.mapper;
 
 import org.springframework.stereotype.Component;
 
-import register_system.backend.dto.Category.CategoryRequest;
-import register_system.backend.dto.Category.CategoryResponse;
-import register_system.backend.model.category.CategoryModel;
+import register_system.backend.dto.CategoryRequest;
+import register_system.backend.dto.CategoryResponse;
+import register_system.backend.model.CategoryModel;
 
 import java.util.List;
 

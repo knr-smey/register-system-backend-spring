@@ -4,7 +4,7 @@ package register_system.backend.dto;
 import java.time.LocalDate;
 
 import lombok.Data;
-import register_system.backend.Enum.stausStudent;
+import register_system.backend.enums.stausStudent;
 @Data
 
 public class dtoResponse {

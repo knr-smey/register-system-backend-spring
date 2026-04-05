@@ -1,7 +1,7 @@
 package register_system.backend.controller;
 
-import register_system.backend.dto.PromotionDTO.PromotionRequest;
-import register_system.backend.dto.PromotionDTO.PromotionResponse;
+import register_system.backend.dto.PromotionRequest;
+import register_system.backend.dto.PromotionResponse;
 import register_system.backend.service.PromotionService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

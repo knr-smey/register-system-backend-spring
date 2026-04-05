@@ -1,6 +1,6 @@
 package register_system.backend.service;
-import register_system.backend.dto.PromotionDTO.PromotionRequest;
-import register_system.backend.dto.PromotionDTO.PromotionResponse;
+import register_system.backend.dto.PromotionRequest;
+import register_system.backend.dto.PromotionResponse;
 import register_system.backend.model.Promotion;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;

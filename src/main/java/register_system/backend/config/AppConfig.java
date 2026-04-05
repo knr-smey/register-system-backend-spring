@@ -1,4 +1,4 @@
-package register_system.backend.config.Category;
+package register_system.backend.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

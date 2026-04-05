@@ -9,7 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import register_system.backend.Enum.stausStudent;
+import register_system.backend.enums.stausStudent;
 
 @Entity
 @Table(name = "class_models")

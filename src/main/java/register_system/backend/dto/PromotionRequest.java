@@ -1,4 +1,4 @@
-package register_system.backend.dto.PromotionDTO;
+package register_system.backend.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.*;

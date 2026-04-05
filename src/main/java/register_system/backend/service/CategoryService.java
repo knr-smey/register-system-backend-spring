@@ -1,10 +1,10 @@
-package register_system.backend.service.Category;
+package register_system.backend.service;
 
-import register_system.backend.dto.Category.CategoryRequest;
-import register_system.backend.dto.Category.CategoryResponse;
-import register_system.backend.mapper.Category.CategoryMapper;
-import register_system.backend.model.category.CategoryModel;
-import register_system.backend.repository.Category.CategoryRepository;
+import register_system.backend.dto.CategoryRequest;
+import register_system.backend.dto.CategoryResponse;
+import register_system.backend.mapper.CategoryMapper;
+import register_system.backend.model.CategoryModel;
+import register_system.backend.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
