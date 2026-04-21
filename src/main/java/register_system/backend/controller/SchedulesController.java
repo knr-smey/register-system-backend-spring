@@ -47,6 +47,7 @@ public class SchedulesController {
     public ResponseEntity<ScheduleResponse> create(@Valid @RequestBody ScheduleRequest request) {
         return ResponseEntity.status(HttpStatus.CREATED).body(schedulesService.create(request));
     }
+    
 
     @PutMapping("/{id}")
     @Operation(summary = "Update schedule", description = "Update an existing schedule by its ID")
