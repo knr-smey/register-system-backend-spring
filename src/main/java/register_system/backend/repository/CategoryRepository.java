@@ -1,9 +1,9 @@
-package register_system.backend.repository.Category;
+package register_system.backend.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import register_system.backend.model.category.CategoryModel;
+import register_system.backend.model.CategoryModel;
 
 import java.util.List;
 import java.util.Optional;

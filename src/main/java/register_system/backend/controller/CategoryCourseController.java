@@ -1,9 +1,9 @@
-package register_system.backend.controller.category ;
+package register_system.backend.controller ;
 
 
-import register_system.backend.dto.Category.CategoryRequest;
-import register_system.backend.dto.Category.CategoryResponse;
-import register_system.backend.service.Category.CategoryService;
+import register_system.backend.dto.CategoryRequest;
+import register_system.backend.dto.CategoryResponse;
+import register_system.backend.service.CategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

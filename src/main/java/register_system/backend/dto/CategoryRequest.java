@@ -1,18 +1,15 @@
-package register_system.backend.dto.Category;
- 
+package register_system.backend.dto;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
-import java.time.LocalDateTime;
  
-public class CategoryResponse {
+public class CategoryRequest {
  
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
     @Builder
-    public static class Detail {
- 
-        private Long id;
+    public static class Create {
  
         private String name;
  
@@ -20,21 +17,13 @@ public class CategoryResponse {
  
         @JsonProperty("created_by")
         private Long createdBy;
- 
-        @JsonProperty("created_at")
-        private LocalDateTime createdAt;
- 
-        @JsonProperty("updated_at")
-        private LocalDateTime updatedAt;
     }
  
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
     @Builder
-    public static class Summary {
- 
-        private Long id;
+    public static class Update {
  
         private String name;
  
